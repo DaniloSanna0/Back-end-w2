@@ -1,5 +1,6 @@
 package it.epicode;
 
+//creo una classe astratta per estenderla alle altre classi con getter setter e costruttore
 
 public abstract class ElementoBiblioteca {
 

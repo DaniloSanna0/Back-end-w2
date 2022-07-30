@@ -3,7 +3,6 @@ package it.epicode;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
@@ -11,10 +10,7 @@ import java.util.Map;
 
 public class Archivio {
 
-	public static void libri(List<Libro> libri) {
-		List<Libro> libro = libri.stream().toList();
-
-	}
+	// creo una map chiamata catalogo dove verranno inseriti tutti i tipi di libri
 
 	static Map<String, ElementoBiblioteca> catalogo = new HashMap<>();
 
@@ -43,6 +39,8 @@ public class Archivio {
 		catalogo.put(magazine4.getISBNcode(), magazine4);
 		catalogo.put(magazine5.getISBNcode(), magazine5);
 		catalogo.remove(book5.getISBNcode(), book5);
+
+		// stampo i libri aggiunti nella biblioteca e i metodi scritti in basso
 
 		System.out.println("CATALOGO INIZIALE COMPLETO:");
 		catalogo.forEach((y, x) -> System.out.println(x));
@@ -83,7 +81,7 @@ public class Archivio {
 				.forEach(System.out::println);
 	}
 
-	public static void saveOnDisk()  throws IOException {
+	public static void saveOnDisk() throws IOException {
 
 		String catalogToText = "";
 
@@ -96,7 +94,7 @@ public class Archivio {
 		FileUtils.writeStringToFile(catalogFile, catalogToText, "UTF-8");
 	}
 
-	public static void loadFromDisk()  throws IOException {
+	public static void loadFromDisk() throws IOException {
 
 		File file = new File("./catalog.txt");
 

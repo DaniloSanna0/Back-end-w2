@@ -1,5 +1,8 @@
 package it.epicode;
 
+//creo una classe con getter setter e costruttore
+
+
 public class Libro extends ElementoBiblioteca{
 	
 	private String autore;

@@ -1,5 +1,8 @@
 package it.epicode;
 
+//creo una classe con getter setter e costruttore
+
+
 public class Rivista extends ElementoBiblioteca{
 	
 	Periodicity periodicity;
